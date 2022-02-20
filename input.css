@@ -1,3 +1,124 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.attribution {
+  padding-top: 2em;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  padding: 2em 1.5em;
+  background-color: hsl(0, 0%, 96%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main {
+  display: grid;
+  place-items: center;
+  gap: 4em;
+}
+
+.capsule-1 {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+}
+.capsule-2 {
+  background-color: hsl(272, 41%, 93%);
+  opacity: 0.6;
+}
+
+.heading {
+  color: hsl(271, 36%, 24%);
+}
+.paragraph {
+  color: hsl(270, 7%, 64%);
+}
+
+@layer components {
+  .mobile {
+    @apply p-4 rounded-[2em] bg-white   max-w-[320px]
+    shadow-2xl flex flex-col justify-center items-center;
+  }
+  .app {
+    @apply rounded-[1em] min-w-[288px] max-h-[600px] overflow-auto;
+  }
+  .chat-messages {
+    @apply max-h-[470px] overflow-y-auto;
+  }
+
+  .top {
+    @apply relative;
+  }
+  .notch {
+    @apply w-48 h-8 absolute -top-3 left-1/2 -translate-x-1/2  rounded-b-2xl bg-white;
+  }
+  .gradient {
+    @apply bg-gradient-to-r from-purple-500 to-pink-500 text-white;
+  }
+  .chat-message {
+    @apply p-2 rounded-xl text-xs max-w-[180px];
+  }
+  .incoming-message {
+    @apply rounded-bl-none;
+    background-color: hsl(272, 41%, 93%);
+    color: hsl(276, 55%, 52%);
+  }
+  .outgoing-message {
+    @apply rounded-br-none bg-white self-end shadow-md;
+  }
+}
+
+.app {
+  background-color: hsl(270, 20%, 96%);
+}
+.app::-webkit-scrollbar {
+  appearance: none;
+  width: 0;
+}
+.chat-messages::-webkit-scrollbar {
+  appearance: none;
+  width: 0;
+}
+button[type="submit"] {
+  background-color: hsl(271, 36%, 24%);
+}
+input[type="radio"] {
+  appearance: none;
+
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+
+  border: 2px solid hsl(289, 100%, 72%);
+  border-radius: 9999px;
+}
+input[type="radio"]:checked {
+  background-color: hsl(289, 100%, 72%);
+}
+#chat-input {
+  border: none;
+  outline: none;
+}
+
+@media (min-width: 1024px) {
+  main {
+    gap: 0;
+    padding: 2em 8em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.text-content {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transform: translateY(20px);
+}

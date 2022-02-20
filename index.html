@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="output.css" />
     <link
       rel="icon"
@@ -12,34 +18,198 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | [Challenge Name Here]</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <title>Abhik B | Chat app CSS illustration</title>
   </head>
-  <body class="bg-red-500">
-    Samuel Green Available to Walk That sounds great. I’d be happy with that.
-    Could you send over some pictures of your dog, please? Here are a few
-    pictures. She’s a happy girl! Can you make it? She looks so happy! The time
-    we discussed works. How long shall I take her out for? 30 minute walk $29 1
-    hour walk $49 Type a message… Simple booking Stay in touch with our dog
-    walkers through the chat interface. This makes it easy to discuss
-    arrangements and make bookings. Once the walk has been completed you can
-    rate your walker and book again all through the chat.
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+  <body class="font-rubik">
+    <div class="absolute inset-0 -z-10 lg:overflow-hidden">
+      <div
+        class="w-1/2 lg:w-1/3 absolute capsule-1 top-0 left-0 lg:-left-[5%] rounded-br-full h-1/2 lg:h-3/4 lg:rounded-b-full"
+      ></div>
+      <div
+        class="w-1/2 lg:w-1/3 absolute top-[80%] lg:top-[20%] right-0 lg:-right-[10%] rounded-tl-full lg:rounded-t-full h-2/3 lg:h-[100%] capsule-2"
+      ></div>
     </div>
+    <main>
+      <figure class="mobile">
+        <div class="top">
+          <div class="notch"></div>
+        </div>
+        <div class="app">
+          <!-- Header -->
+          <div
+            class="gradient w-full rounded-t-2xl px-2 pt-8 pb-2 flex gap-2 items-center"
+          >
+            <!-- arrow svg -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="{2}"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            <!-- avatar -->
+            <img
+              class="h-8 w-8 border-2 border-white rounded-full"
+              src="./images/avatar.jpg"
+              alt="Avatar of Samuel Green"
+            />
+            <!-- name & status -->
+            <p class="leading-[.5rem]">
+              <span class="font-semibold text-sm">Samuel Green</span>
+              <br />
+              <span class="text-xs opacity-50">Available to Walk</span>
+            </p>
+            <!-- three dots -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 ml-auto"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+              />
+            </svg>
+          </div>
+
+          <!-- Chat section -->
+          <section
+            class="flex flex-col gap-3 p-2 overflow-x-hidden chat-messages"
+          >
+            <div class="chat-message incoming-message msg-1">
+              That sounds great. I’d be happy to discuss more.
+            </div>
+            <div class="chat-message incoming-message msg-1">
+              Could you send over some pictures of your dog, please?
+            </div>
+            <div class="flex gap-3 self-end">
+              <img
+                src="./images/dog-image-1.jpg"
+                alt="dog-1"
+                class="h-14 w-14 rounded-md msg-2"
+              />
+              <img
+                src="./images/dog-image-2.jpg"
+                alt="dog-2"
+                class="h-14 w-14 rounded-md msg-2"
+              />
+              <img
+                src="./images/dog-image-3.jpg"
+                alt="dog-3"
+                class="h-14 w-14 rounded-md msg-2"
+              />
+            </div>
+            <div class="chat-message outgoing-message msg-3">
+              Here are a few pictures.She’s a happy girl!
+            </div>
+            <div class="chat-message outgoing-message msg-3">
+              Can you make it?
+            </div>
+            <div class="chat-message incoming-message msg-4">
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </div>
+            <div class="grid gap-2">
+              <div class="chat-message flex gap-2 gradient items-center msg-5">
+                <input
+                  type="radio"
+                  id="price-1"
+                  name="fav_language"
+                  value="29"
+                />
+                <label
+                  for="price-1"
+                  class="flex justify-between w-full items-center"
+                >
+                  <span class="opacity-60">30 minute walk</span>
+                  <span class="font-bold text-base">$29</span>
+                </label>
+              </div>
+              <div class="chat-message flex gap-2 gradient items-center msg-5">
+                <input
+                  type="radio"
+                  id="price-2"
+                  name="fav_language"
+                  value="29"
+                />
+                <label
+                  for="price-2"
+                  class="flex justify-between w-full items-center"
+                >
+                  <span class="opacity-60">1 hour walk</span>
+                  <span class="font-bold text-base"> $49</span>
+                </label>
+              </div>
+            </div>
+          </section>
+          <section class="mb-1 p-2">
+            <form
+              id="chat-form"
+              class="flex w-full rounded-3xl bg-white ring-cyan-500 focus-within:ring-2"
+            >
+              <input
+                id="chat-input"
+                type="text"
+                class="px-4 py-2 flex-1 bg-transparent focus:outline-none focus:bg-transparent placeholder:text-xs"
+                aria-label="chat-input"
+                placeholder="Type a message ..."
+              />
+              <button class="px-3 py-2 rounded-full" type="submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </form>
+          </section>
+        </div>
+      </figure>
+
+      <section
+        class="text-center lg:text-left lg:justify-self-start text-content"
+      >
+        <h1 class="text-4xl heading font-medium">Simple booking</h1>
+        <p class="mt-2 leading-6 paragraph py-4 max-w-sm lg:max-w-[460px]">
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Coded by <a href="https://www.youtube.com/c/abhikb/videos">Abhik B</a>.
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script defer src="animations.js"></script>
+    <script defer src="chat.js"></script>
   </body>
 </html>
