@@ -28,7 +28,8 @@ function addMessage(message) {
   chatMessage.innerText = message;
   document.querySelector(".chat-messages").appendChild(chatMessage);
   document.querySelector(".chat-messages").scrollTop +=
-    chatMessage.getBoundingClientRect().height + 10;
+    chatMessage.getBoundingClientRect().y + 10;
+  console.log(chatMessage.getBoundingClientRect());
   t2.from(chatMessage, { x: 30, opacity: 0 });
   chatInput.value = "";
 }

@@ -101,6 +101,12 @@ input[type="radio"] {
 
   border: 2px solid hsl(289, 100%, 72%);
   border-radius: 9999px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.msg-5 input[type="radio"]:hover {
+  background-color: white;
+  border: 2px solid white;
 }
 input[type="radio"]:checked {
   background-color: hsl(289, 100%, 72%);
